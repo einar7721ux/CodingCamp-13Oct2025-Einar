@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List - Einar</title>
+
+    <!--CSS External FIle-->
+    <link rel="stylesheet" href="css/style.css"> 
+
+    <!--Tailwind CSS CDN-->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body>
+    <!--Header Section-->
+    <header>
+        <h1 class="text-3x1 font-bold">To-do list</h1>
+    </header>
+
+    <!--Main Section-->
+    <main>
+        <div class="container">
+        <section class="todo-app my-3">
+            <input type="text" class="border rounded p-2" id="todo-input" placeholder="Add new task..." style="border-radius: 12px;"/>
+            <input type="date" class="border rounded p-2" id="todo-date" placeholder="Select due date" style="border-radius: 12px;"/>
+            <button class="bg-cyan-500 text-black rounded p-3" onclick="addTask();">+</button>          
+        </section>
+
+        <section class="flex justify-between my-4">
+            <button class="bg-gray-300 rounded p-2" id="filter-btn" onclick="sortByDate();">Filter</button>
+            <button class="bg-red-500 text-white rounded p-2" onclick="deleteAllTasks();" style="position: relative; top: -57px;">Delete all task</button>
+        </section>
+
+        <!--Section for task table-->
+        <section class="my-4">
+             <div class="table-container" style="border-radius: 15px">
+                <table class="tasks-table">
+                    <thead>
+                        <tr>
+                            <hr>
+                            <th>TASK</th>
+                            <th>DUE DATE</th>
+                            <th>STATUS</th>
+                            <th>ACTIONS</th>
+                        </tr>
+                    </thead>
+                    <tbody id="task-list">
+                        <tr>
+                            <td colspan="4" class="no-tasks">No task found</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        </div>
+    </main>
+
+    <footer>
+        <p class="text-sm">&copy; 2025 Einar Todo List</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
