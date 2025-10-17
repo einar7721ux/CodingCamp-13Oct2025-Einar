@@ -24,11 +24,11 @@
         <section class="todo-app my-3" style="display: flex; gap: 8px; align-items: center;">
             <input type="text" class="border rounded p-2" id="todo-input" placeholder="Add new task..." style="border-radius: 12px;"/>
             <input type="date" class="border rounded p-2" id="todo-date" placeholder="Select due date" style="border-radius: 12px;"/>
-            <button class="bg-cyan-500 text-black rounded p-3" onclick="addTask();">+</button>          
+             <button class="bg-cyan-500 text-black rounded p-2" onclick="addTask();" style="width: 29px; height: 32px; display: flex; align-items: center; justify-content: center; font-size: 24px;">+</button>          
         </section>
 
         <section class="flex justify-between my-4">
-            <button class="bg-gray-300 rounded p-2" id="filter-btn" onclick="sortByDate();">Filter</button>
+            <button class="rounded p-2 text-white" id="filter-btn" onclick="sortByDate();" style="background-color: #141f31;">Filter</button>
             <button class="bg-red-500 text-white rounded p-2" onclick="deleteAllTasks();" style="position: relative; top: -57px;">Delete all task</button>
         </section>
 
@@ -65,3 +65,4 @@
 
 
 </html>
+
